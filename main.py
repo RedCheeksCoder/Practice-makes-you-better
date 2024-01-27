@@ -254,10 +254,18 @@ else:
 #capitalize()
 #upper()
 #lower()
+#startswith("x")
 #isdigit()
 #isalpha()
 #count(“x”)
 #replace(“x”, “-“)
+
+""" fruit = "Banana"
+
+if fruit.lower().startswith("b"):
+    print("Yes it starts with b")
+else:
+    print("Nah") """
 
 """ username = input("Enter your username: ")
 
@@ -412,7 +420,35 @@ for x in range(1, 21):
    if x == 13:
        break
    else:
-       print(x) """
+       print(x) 
+# ---------------- TIME ----------------
+
+import time
+
+for x in range(1,11):
+    time.sleep(1)
+    print(x) """
+
+
+#FRUITS first letter
+""" fruits = ["Apple", "Banana", "Orange", "Grapes", "Watermelon", 
+        "Mango", "Pineapple", "Strawberry", "Blueberry", "Kiwi",
+        "Peach", "Pear", "Cherry", "Plum", "Raspberry",
+        "Pomegranate", "Apricot", "Cantaloupe", "Coconut", "Lemon"]
+
+# Get user input for a letter
+letter = input("Enter a letter: ")
+
+matching_fruits = []
+
+for fruit in fruits:
+    if fruit.lower().startswith(letter.lower()):
+        matching_fruits.append(fruit)
+
+if matching_fruits:
+    print(f"Fruits starting with '{letter}': {matching_fruits}")
+else:
+    print(f"No fruits found starting with '{letter}'.") """
 
 ####OPTIONAL TO ADD######
 """ # nested loop = A loop within another loop (outer, inner)
@@ -558,3 +594,9 @@ for value in capitals.values():
 items = capitals.items()
 for key, value in capitals.items():
     print(f"{key}: {value}") """
+
+
+
+
+
+
