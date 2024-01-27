@@ -194,10 +194,221 @@ else:
     print("You need to take the exam.") """
 
 
-answer = input("Do you want to continue? (Y/N)")
+""" answer = input("Do you want to continue? (Y/N)")
 
 if answer == 'Y':
     print("We'll continue on playing!!!")
 else:
-    print("It's sad to say good bye my friend.")
+    print("It's sad to say good bye my friend.") """
 
+""" answer = True
+
+if answer:
+    print("ROCK AND ROLL!!!")
+else:
+    print("NAHH T_T")
+ """
+
+""" ##CALCULATOR
+# Get user input for the operation
+operation = input("Enter the operation (+, -, *, /): ")
+
+# Get user input for two numbers
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+# Perform the selected operation
+result = 0
+
+if operation == '+':
+    result = num1 + num2
+elif operation == '-':
+    result = num1 - num2
+elif operation == '*':
+    result = num1 * num2
+elif operation == '/':
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        print("Cannot divide by zero.")
+else:
+    print("Invalid operation. Please enter +, -, *, or /.")
+
+# Print the result
+if operation in ['+', '-', '*', '/']:
+    print(f"Result: {result}")
+ """
+
+#LOGICAL OPERATORS
+
+""" temperature = 25
+
+if temperature > 0 and temperature < 30:
+    print("Temperature is within good range.")
+else:
+    print("The temperature is outside the range.") """
+
+#len()
+#find(“x”)
+#rfind(“x”)
+#capitalize()
+#upper()
+#lower()
+#isdigit()
+#isalpha()
+#count(“x”)
+#replace(“x”, “-“)
+
+""" username = input("Enter your username: ")
+
+if len(username) > 12:
+    print("Usernames must not be more than 12 characters")
+else:
+    print(f"Welcome to TUP-Taguig {username}!")
+
+if username.count(" ") >= 1: #find()
+    print("Usernames must not contain spaces.")
+else:
+    print(f"Welcome to TUP-Taguig {username}!")
+
+if not username.isalpha():
+    print("Usernames must not contain numbers")
+else:
+    print(f"Welcome to TUP-Taguig {username}!") """
+
+
+
+""" username = input("Enter your username: ")
+
+if len(username) > 12:
+    print("Usernames must not be more than 12 characters")
+elif username.count(" ") >= 1: #find()
+    print("Usernames must not contain spaces.")
+elif not username.isalpha():
+    print("Usernames must not contain numbers")
+else:
+    print(f"Welcome to TUP-Taguig {username}!") """
+
+#Indexing
+#[start : end : step]
+
+""" credit_card = "5417-2351-6678-1124"
+
+print(credit_card[0])
+print(credit_card[0:4])
+print(credit_card[5:9])
+print(credit_card[5:])
+print(credit_card[-3])
+print(credit_card[::3])
+
+#Last 4 digit
+credit_card = input("Enter your credit card number: ")
+last_four = credit_card[-4:]
+print(f"XXXX-XXXX-XXXX-{last_four}") """
+
+# .(number)f = round to that many decimal places
+# :(number) = allocate that many spaces
+# :0(number) = allocate and zero pad that many spaces
+# :< = left justify
+# :> = right justify
+# :^ = center align
+# :+ = use a plus sign to indicate positive value
+# := = place sign to leftmost position
+# :  = insert a space before positive numbers
+# :, = comma separator
+# :% = percentage format
+
+#format specifiers
+price1 = 3.14159 
+price2 = -987.65 
+price3 = 12.34 
+print(f"price1 is: ${price1:}") 
+print(f"price2 is: ${price2:}") 
+print(f"price3 is: ${price3:}")
+
+
+###########WHILE LOOP############################
+
+# ---------------- EXAMPLE 1 ----------------
+
+name = input("Enter your name: ")
+
+while name == "":
+   print("You did not enter your name!")
+   name = input("Enter your name: ")
+
+print(f"Hello {name}")
+
+# ---------------- EXAMPLE 2 ----------------
+
+age = int(input("Enter your age: "))
+
+while age < 0:
+   print("Age can't be negative")
+   age = int(input("Enter your age: "))
+
+print(f"You are {age} years old")
+
+
+# ---------------- EXAMPLE 3 ----------------
+
+food = input("Enter a food you like (q to quit): ")
+
+while not food == "q":
+   print(f"You like {food}")
+   food = input("Enter another food you like (q to quit): ")
+
+print("bye")
+
+# ---------------- EXAMPLE 4 ----------------
+
+num = int(input("Enter a # between 1 - 10: "))
+
+while num < 1 or num > 10:
+    print(f"{num} is not valid")
+    num = int(input("Enter a # between 1 - 10: "))
+
+print(f"You picked the number {num}")
+
+
+
+###########FOR LOOPS#########################
+# ---------------- EXAMPLE 1 ----------------
+
+for x in range(1, 11):
+   print(x)
+
+# ---------------- EXAMPLE 2 ----------------
+
+for x in reversed(range(1, 11)):
+   print(x)
+
+print("Happy New Year!")
+
+# ---------------- EXAMPLE 3 ----------------
+
+for x in range(1, 11, 2):
+   print(x)
+
+# ---------------- EXAMPLE 4 ----------------
+
+credit_card = "1234-5678-9012-3456"
+
+for x in credit_card:
+   print(x)
+
+# ---------------- CONTINUE ----------------
+
+for x in range(1, 21):
+   if x == 13:
+       continue
+   else:
+       print(x)
+
+# ---------------- BREAK ----------------
+
+for x in range(1, 21):
+   if x == 13:
+       break
+   else:
+       print(x)
