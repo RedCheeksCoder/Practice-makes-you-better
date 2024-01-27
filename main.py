@@ -318,16 +318,16 @@ print(f"XXXX-XXXX-XXXX-{last_four}") """
 # :, = comma separator
 # :% = percentage format
 
-#format specifiers
+""" #format specifiers
 price1 = 3.14159 
 price2 = -987.65 
 price3 = 12.34 
 print(f"price1 is: ${price1:}") 
 print(f"price2 is: ${price2:}") 
-print(f"price3 is: ${price3:}")
+print(f"price3 is: ${price3:}") """
 
 
-###########WHILE LOOP############################
+""" ###########WHILE LOOP############################
 
 # ---------------- EXAMPLE 1 ----------------
 
@@ -368,11 +368,12 @@ while num < 1 or num > 10:
     print(f"{num} is not valid")
     num = int(input("Enter a # between 1 - 10: "))
 
-print(f"You picked the number {num}")
+print(f"You picked the number {num}") """
 
 
 
-###########FOR LOOPS#########################
+
+""" ###########FOR LOOPS#########################
 # ---------------- EXAMPLE 1 ----------------
 
 for x in range(1, 11):
@@ -411,4 +412,149 @@ for x in range(1, 21):
    if x == 13:
        break
    else:
-       print(x)
+       print(x) """
+
+####OPTIONAL TO ADD######
+""" # nested loop = A loop within another loop (outer, inner)
+#                          outer loop:
+#                              inner loop:
+
+rows = int(input("Enter the # of rows: "))
+columns = int(input("Enter the # of columns: "))
+symbol = input("Enter a symbol to use: ")
+
+for x in range(rows):
+   for y in range(columns):
+       print(symbol, end="")
+   print() """
+
+
+#COLLECTIONS
+#   List  = [] ordered and changeable. Duplicates OK
+#   Set   = {} unordered and immutable, but Add/Remove OK. NO duplicates
+#   Tuple = () ordered and unchangeable. Duplicates OK. FASTER
+
+
+""" fruits = ["apple", "orange", "banana", "coconut"]
+#List  = [] ordered and changeable. Duplicates OK
+print(len(fruits))
+print("pineapple" in fruits)
+print(help(fruits)) #AskForHelp
+
+#ADDING in LIST
+fruits[0] = "pineapple"
+print(fruits[0])
+
+#-------METHODS---------------
+#Add an element at the end of the list
+append()
+#remove an element
+remove()
+#insert an an index
+insert(x, "x")
+#sorting alphabetically
+sort()
+#reverse order
+reverse()
+
+#if you want alphabetical reverse sorting
+sort()
+reverse()
+#clear list
+clear()
+#find the index of an element
+index()
+#number of occurence of an element
+count() """
+
+
+""" #---------SETS----------
+#Set   = {} unordered and immutable, but Add/Remove OK. NO duplicates
+fruits = {"apple", "orange", "banana", "mango"}
+#Error: fruits[0] #Note: Unordered - cannot have 
+#adding an element 
+add()
+#removing an element 
+remove()
+#removing random element
+pop()
+#clear all elements
+clear()
+
+#NO DUPLICATES
+#Add same element to check """
+
+
+""" #---------Tuple----------
+#Tuple = () ordered and unchangeable. Duplicates OK. FASTER
+fruits = ("apple", "orange", "banana", "mango")
+
+#Only two common methods
+#get the index
+index()
+#number of occurence in tuple
+count()
+ """
+
+
+#####SHOPPING CART#####
+""" foods = []
+prices = []
+total = 0
+
+while True:
+    food = input("Enter a food to buy (q to quit): ")
+    if food.lower() == "q":
+        break
+    else:
+        price = float(input(f"Enter the price of a {food}: $"))
+        foods.append(food)
+        prices.append(price)
+
+print("----- YOUR CART -----")
+
+for food in foods:
+    print(food, end=" ")
+
+for price in prices:
+    total += price
+
+print()
+print(f"Your total is: ${total}") """
+
+
+#---------DICTIONARY-----------------
+#dictionary =  a collection of {key:value} pairs
+#ordered and changeable. No duplicates
+
+""" capitals = {"USA": "Washington D.C.",
+            "India": "New Delhi",
+            "China": "Beijing",
+            "Russia": "Moscow"}
+
+print(dir(capitals))
+print(help(capitals))
+print(capitals.get("Japan"))
+
+if capitals.get("Russia"):
+    print("That capital exists")
+else:
+    print("That capital doesn't exist")
+
+capitals.update({"Germany": "Berlin"})
+capitals.update({"USA": "Detroit"})
+capitals.pop("China")
+capitals.popitem()
+capitals.clear()
+
+keys = capitals.keys()
+for key in capitals.keys():
+    print(key)
+
+values = capitals.values()
+for value in capitals.values():
+    print(value)
+
+items = capitals.items()
+for key, value in capitals.items():
+    print(f"{key}: {value}") """
